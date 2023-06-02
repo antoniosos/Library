@@ -19,8 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 }
-
-?>
+/*
 <html>
   <body>
     <form method="POST" action="Login.php">
@@ -28,5 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       Password: <input type="password" name="password"><br>
       <input type="submit" value="Login">
     </form>
+    
   </body>
 </html>
+*/
+?>
+
+

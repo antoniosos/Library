@@ -1,17 +1,56 @@
-const nicknameInput = document.getElementById("fname");
-const surnameInput = document.getElementById("sname");
-const passwordInput = document.getElementById("password");
-const confirmPasswordInput = document.getElementById("confirm-password");
-const birthDateInput = document.getElementById("birthdate");
+const nicknameInput = document.getElementById("nicknameInput");
+const emailInput = document.getElementById("emailInput");
+const passwordInput = document.getElementById("passwordInput");
+const confirmPasswordInput = document.getElementById("confirm-passwordInput");
+//const birthDateInput = document.getElementById("birthdate");
 const warningFields = document.getElementsByClassName("warning");
 const submitButton = document.getElementById("button");
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+  
+  if (!validateForm()) {
+    return false; // Validation failed, prevent form submission
+  }
+  
+  // Validation passed
+  const nickname = nicknameInput.value;
+  const password = passwordInput.value;
+  const email = emailInput.value;
+
+  // Create an XMLHttpRequest object
+  const xhr = new XMLHttpRequest();
+  const url = "Register.php";
+  const params = `nickname=${nickname}&password=${password}&email=${email}`;
+
+  // Configure the request
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+  // Handle the response
+  xhr.onload = function() {
+
+      console.log("something");
+
+  };
+
+  // Send the request
+  xhr.send(params);
+});
+
 
 function validateForm() {
-    showWarning(validateNickname(), "fnameLength");
-    showWarning(validateSurname(), "snameLength");
-    showWarning(validatePassword(), "passwordWar");
-    showWarning(validateAge(), "age");
-}
+    // Perform form validation checks here
+    
+    const nicknameValidation = validateNickname();
+    const passwordValidation = validatePassword();
+    
+    showWarning(nicknameValidation, "fnameLength");
+    showWarning(passwordValidation, "passwordWar");
+    
+    return nicknameValidation === "" && passwordValidation === ""; // Return false if any validation fails
+  }
 
 function validateNickname() {
     if (nicknameInput.value.length < 2) {
@@ -21,6 +60,7 @@ function validateNickname() {
         return Warnings.fnameTooLong;
     }
     return "";
+    
 }
 
 function validatePassword() {
@@ -54,7 +94,3 @@ const Warnings = {
     isEighteen: "18"
 }
 
-document.addEventListener("submit", (e) => {
-    e.preventDefault();
-    validateForm();
-});

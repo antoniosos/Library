@@ -13,19 +13,8 @@ function createUserRow() {
     $pdo = null;
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register-submit'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     createUserRow();
-    $_POST = null;
 }
 ?>
 
-<html>
-  <body>
-    <form method="POST" action="Register.php">
-      Email: <input type="text" name="email"><br>
-      Password: <input type="password" name="password"><br>
-      Username: <input type="text" name="nickname"><br>
-      <input type="submit" value="Register">
-    </form>
-  </body>
-</html>
