@@ -9,18 +9,18 @@ const row = {
     contents: null,
     coverImgString: null,
     render: function() {
-      const rowElement = document.createElement("div");
-      rowElement.classList.add("row");
+      const rowElement = document.createElement("tr");
+      rowElement.classList.add("my-book");
       rowElement.innerHTML = `
+        <td class="coverImgString">${this.coverImgString}</td>
+        <td class="id_book">${this.id_book}</td>
+        <td class="title">${this.title}</td>
+        <td class="author">${this.author}</td>
+        <td class="rel_date">${this.rel_date}</td>
+        <td class="genre">${this.genre}</td>
+        <td class="page_count">${this.page_count}</td>
+        <td class="contents">${this.contents}</td>
 
-        <span class="id_book">${this.id_book}</span>
-        <span class="title">${this.title}</span>
-        <span class="author">${this.author}</span>
-        <span class="rel_date">${this.rel_date}</span>
-        <span class="genre">${this.genre}</span>
-        <span class="page_count">${this.page_count}</span>
-        <span class="contents">${this.contents}</span>
-        <span class="coverImgString">${this.coverImgString}</span>
       `;
       return rowElement;
     }
@@ -64,7 +64,7 @@ const row = {
       }
 
   // Render and append each row to the container element
-  const container = document.getElementById("container");
+  const container = document.getElementById("my-books-body");
   shelve.forEach(function(object) {
     const newRow = Object.create(row);
     newRow.coverImgString = object.coverImgString;
