@@ -1,4 +1,6 @@
 <?php
+
+header("Content-Type: application/json; charset=UTF-8");
 // Connect to the database
 $dsn = "mysql:dbname=wa_library;port=8888;host=localhost";
 $username = "root"; 
@@ -15,5 +17,5 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $booksJson = json_encode($books);
 
 // Pass the JSON data to JavaScript
-echo "<script>var booksData = $booksJson;</script>";
+echo $booksJson;
 ?>
