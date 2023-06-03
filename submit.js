@@ -31,7 +31,10 @@ form.addEventListener("submit", function(event) {
   // Handle the response
   xhr.onload = function() {
 
-      console.log("something");
+    $response = xhr.responseText;
+      if($response === "success"){
+        window.location.href = "home.html";
+      }
 
   };
 

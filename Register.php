@@ -7,9 +7,17 @@ function createUserRow() {
     $email = $_POST['email'];
     $pdo = new PDO($dsn, $username);
 
-    $stmt = $pdo->prepare("CALL insert_user(?,?,?)");
-    $stmt->execute([$password, $nickname, $email]);
+    $stmt1 = $pdo->prepare("CALL check_ifMailExists (?)");
+    $stmt1->execute([$email]);
 
+    $rowCount = $stmt1->rowCount();
+    if($rowCount == 0){
+    $stmt2 = $pdo->prepare("CALL insert_user(?,?,?)");
+    $stmt2->execute([$password, $nickname, $email]);
+    }else{
+      //say that email is already been used and ask user to log in instead
+      
+    }
     $pdo = null;
 }
 
