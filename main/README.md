@@ -1,2 +1,0 @@
-# Library
-WA final project
