@@ -1,0 +1,35 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <label for="filter">Filter by:</label>
+    <select id="filter">
+        <option value="none">None</option>
+        <option value="author">Author</option>
+        <option value="title">Title</option>
+        <option value="page_count">Page count</option>
+        <option value="genre">Genre</option>
+    </select>
+    <button onclick="redirectToAddBook()">Add Book</button>
+      
+<br>
+    <div id="container">
+        
+    </div>
+    <script src="bookRowWriter.js"></script> 
+    
+
+    <script>
+        function redirectToAddBook() {
+            // Replace "page-url" with the actual URL of the page you want to redirect to
+            window.location.href = "/AddBook/addBook.html";
+        }
+    </script>
+</body>
+</html>

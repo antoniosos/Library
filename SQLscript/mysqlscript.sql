@@ -1,0 +1,22 @@
+CREATE DATABASE WA_Library;
+USE WA_Library;
+
+CREATE TABLE books(
+id_book INT AUTO_INCREMENT PRIMARY KEY,
+title NVARCHAR(50) NOT NULL,
+author NVARCHAR (50) NOT NULL,
+rel_date DATE NOT NULL,
+genre NVARCHAR(30) NOT NULL,
+page_count INT NOT NULL,
+contents NVARCHAR(30)
+);
+
+CREATE TABLE users(
+id_user INT AUTO_INCREMENT PRIMARY KEY,
+password NVARCHAR(30) NOT NULL,
+nickname NVARCHAR(30) NOT NULL,
+email NVARCHAR(60) NOT NULL,
+creation_date DATE NOT NULL,
+profileURL NVARCHAR(99),
+comment NVARCHAR(999)
+);
