@@ -92,7 +92,7 @@ const row = {
       }
 
   // Render and append each row to the container element
-  const container = document.getElementById("container");
+  const container = document.getElementById("table");
   shelve.forEach(function(object) {
     const newRow = Object.create(row);
     newRow.coverImgString = object.coverImgString;
@@ -183,7 +183,7 @@ const row = {
     }
     
     function sortBooks(selectedOption) {
-      const bookContainer = document.getElementById("container");
+      const bookContainer = document.getElementById("table");
       const bookElements = Array.from(bookContainer.getElementsByClassName("editable")); //book
     
       bookElements.sort((a, b) => {

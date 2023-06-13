@@ -15,8 +15,14 @@ function submitLoginForm(event) {
     xhr.open("POST", "Login.php", true);
   
     xhr.onload = function () {
-      console.log("success");
-      window.location.href = "/HomePage/testPage.html";
+      console.log(this.responseText);
+      if(xhr.responseText.trim() === 'success'){
+      window.location.href = "/HomePage/testPage.php";
+      }else if (xhr.responseText === 'fail'){
+        //handle failure
+      }else {
+        console.log('Unexpected response:', xhr.responseText);
+      }
     };
   
     // Send the FormData object as the request body
