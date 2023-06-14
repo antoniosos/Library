@@ -161,7 +161,7 @@ const row = {
                 // Handle the response if needed
               }
             };
-            xmlhttp.send("bookId=" + bookid);
+            xmlhttp.send("bookId=" + bookId);
       location.reload();
     }
 

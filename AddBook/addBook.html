@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/HomePage/homePageStyle.css">
     <title>Add Book</title>
 </head>
 <body>
-    <button onclick="redirectToHome()">Go back to Home page</button>
+    <div class="navbar">
+        <a href="/HomePage/testPage.php">Home</a>
+        <a href="#">Add Book</a>
+        <span class="session-variable">
+            <?php
+                session_start();
+                if(isset($_SESSION['email'])) {
+                    echo $_SESSION['email'];
+                }
+            ?>
+        </span>
+    </div>
 
-    <script>
-        function redirectToHome() {
-            // Replace "page-url" with the actual URL of the page you want to redirect to
-            window.location.href = "/HomePage/testPage.html";
-        }
-    </script>
     <h1>Add Book</h1>
     <form id="bookForm" onsubmit="submitForm(event)">
         <label for="title">Title:</label>
@@ -27,6 +33,10 @@
         
         <label for="genre">Genre:</label>
         <input type="text" id="genre" name="genre" required>
+        <br><br>
+
+        <label for="genre">Release date(YYYY-MM-DD):</label>
+        <input type="text" id="genre" name="rel_date" required>
         <br><br>
         
         <label for="page_count">Page Count:</label>
@@ -46,12 +56,16 @@
         <br><br>
 
         <label for="readState">Read State String:</label>
-        <input type="text" id="readState" name="reaadState">
+        <input type="text" id="readState" name="readState">
         <br><br>
 
 
         <input type="submit" value="Add Book">
     </form>
+    
+    <div class="footer">
+        This website was made by Ivan and Antonin as 3rd year's web project
+    </div>
 
     <script>
         function submitForm(event) {
@@ -60,6 +74,9 @@
             // Get the form data
             const form = document.getElementById("bookForm");
             const formData = new FormData(form);
+
+            // Log the form data to the console
+            console.log("Form Data:", formData);
     
             // Create a new AJAX request
             const xhr = new XMLHttpRequest();

@@ -2,19 +2,19 @@
 
 session_start();
 
-// Read the JSON data sent from JS
-$data = json_decode(file_get_contents('php://input'), true);
+// Read the JSON _POST sent from JS
+//$data = json_decode(file_get_contents('php://input'), true);
 
-// Extract the values from the JSON data
-$title = $data['title'];
-$author = $data['author'];
-$rel_date = $data['rel_date'];
-$genre = $data['genre'];
-$page_count = $data['page_count'];
-$contents = $data['contents'];
+// Extract the values from the JSON _POST
+$title = $_POST['title'];
+$author = $_POST['author'];
+$rel_date = $_POST['rel_date'];
+$genre = $_POST['genre'];
+$page_count = $_POST['page_count'];
+$contents = $_POST['contents'];
 $id_user = $_SESSION['id'];
-$starRating = $data['starRating'];
-$readState = $data['readState'];
+$starRating = $_POST['starRating'];
+$readState = $_POST['readState'];
 
 $dsn = "mysql:dbname=wa_library;port=8888;host=localhost";
 $username = "root"; 
