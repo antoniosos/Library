@@ -12,10 +12,10 @@
 <body>
     <header>
         <h1>
-            <a href="#">My book list</a>
+            <a href="HomePage\testPage.php">My book list</a>
         </h1>
         <nav class="navbar">
-            <a href="#">Home</a>
+            <a href="#">About us</a>
             <a href="/AddBook/addBook.php">Add Book</a>
             <span class="session-variable">
                 <?php
