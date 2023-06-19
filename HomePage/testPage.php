@@ -10,19 +10,25 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">Home</a>
-        <a href="/AddBook/addBook.php">Add Book</a>
-        <span class="session-variable">
-            <?php
-                session_start();
-                if(isset($_SESSION['email'])) {
-                    echo $_SESSION['email'];
-                }
-            ?>
-        </span>
-    </div>
-      
+    <header>
+        <h1>
+            <a href="#">My book list</a>
+        </h1>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="/AddBook/addBook.php">Add Book</a>
+            <span class="session-variable">
+                <?php
+                    session_start();
+                    if(isset($_SESSION['email'])) {
+                        echo $_SESSION['email'];
+                    }
+                ?>
+            </span>
+        </nav>
+    </header>
+    
+    
     <br>
     <div id="container">
         <table id="table">
@@ -36,4 +42,3 @@
     </div>
 </body>
 </html>
-
