@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>
+        <h1 class="">
             <a href="HomePage\testPage.php">My book list</a>
         </h1>
         <nav class="navbar">
@@ -30,23 +30,16 @@
                     ?>
                 </span>
             </div>
-            <select name="navigation" id="mobile-navigation">
-                <option value="home">
-                    <a href="HomePage\testPage.php">Home</a>
-                </option>
-                <option value="add book">
-                    <a href="/AddBook/addBook.php">Add Book</a>
-                </option>
-                <option value="about us">
-                    <a href="Navbar\AboutUs.php">About Us</a>
-                </option>
-                <option value="contact">
-                    <a href="Navbar\Contact.php">Contact</a>
-                </option>
-                
-            </select>
-
         </nav>
+        <nav class="dropdown-menu">
+            <button class="dropbtn">Menu ▼</button>
+            <div class="dropdown-content">
+              <a href="HomePage\testPage.php">Home</a>
+              <a href="Navbar\AboutUs.php">About Us</a>
+              <a href="#">Contact</a>
+            </div>
+        </nav>
+          
     </header>
     
     
