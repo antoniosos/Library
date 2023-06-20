@@ -5,6 +5,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+
 header h1 {
   margin-left: 1rem;
 }
@@ -18,13 +19,15 @@ header h1 a {
   display: flex;
   align-items: center;
 }
+
 .navbar-content {
   display: flex;
   align-items: center;
 }
+
 .dropdown-menu {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
   margin: 1rem;
 }
 
@@ -66,41 +69,6 @@ header h1 a {
   background-color: #ddd;
 }
 
-table td {
-  padding: 5px;
-}
-
-#mobile-navigation {
-  display: block;
-  color: #333;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  appearance: none;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-#mobile-navigation:focus {
-  outline: none;
-}
-
-#mobile-navigation option {
-  display: none;
-}
-
-#mobile-navigation:hover option {
-  display: block;
-  
-}
-
-#mobile-navigation:hover {
-  background-color: #ddd;
-
-}
-
 .navbar a {
   display: block;
   color: #333;
@@ -115,24 +83,23 @@ table td {
   color: black;
 }
 
-.navbar .session-variable {
-  font-size: 16px;
-  color: #333;
-  padding-left: 6px;
-  padding-right: 6px;
+#container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  overflow-x: auto;
 }
 
 
-#container {
-display: flex;
-justify-content: center;
+table td {
+  padding-left: 10px;
 }
 
 .editable {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: px 10px;
+  padding: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #ccc;
 }
@@ -140,14 +107,13 @@ justify-content: center;
 .footer {
   background-color: #f1f1f1;
   margin-left: 1rem !important;
-  margin-right: 1rem !important; 
+  margin-right: 1rem !important;
   text-align: center;
   flex-shrink: 0;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-
 
 body {
   display: flex;
@@ -160,18 +126,18 @@ body {
 
 @media (max-width: 600px) {
   .navbar-content {
-      display: none;
+    display: none;
   }
 }
 
 @media (min-width: 600px) {
   .dropdown-menu {
-      display: none;
+    display: none;
   }
 }
 
 @media (max-width: 420px) {
   .heading {
-      font-size: 20px;
+    font-size: 20px;
   }
 }
