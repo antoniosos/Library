@@ -89,6 +89,42 @@ header h1 a {
   margin-right: 1rem;
   overflow-x: auto;
 }
+
+#filter,
+#addBookButton {
+  background-color: #585c64;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#filter:hover,
+#addBookButton:hover {
+  background-color: #4f535b;
+}
+
+#filter:active,
+#addBookButton:active {
+  background-color: #474b52;
+}
+
+#addBookButton {
+  margin-left: 10px;
+}
+
+#filter {
+  margin-right: 10px;
+}
+#filter-label {
+  margin-left: 10.5rem;
+}
+
   
 table td {
   padding-left: 10px;
