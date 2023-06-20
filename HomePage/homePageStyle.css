@@ -178,7 +178,7 @@ body {
 }
 
 @media (max-width: 420px) {
-  .navbar-content {
-      display: none;
+  .heading {
+      font-size: 20px;
   }
 }
