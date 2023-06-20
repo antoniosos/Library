@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homePageStyle.css">
     <title>Home</title>
-    <style>
-        
-    </style>
+    
 </head>
 <body>
     <header>
@@ -43,7 +41,7 @@
     </header>
     
     <main>
-        <label for="filter">Filter by:</label>
+        <label id="filter-label" for="filter">Filter by:</label>
         <select id="filter">
             <option value="none">None</option>
             <option value="author">Author</option>
@@ -51,7 +49,7 @@
             <option value="page_count">Page count</option>
             <option value="genre">Genre</option>
         </select>
-        <button onclick="redirectToAddBook()">Add Book</button>
+        <button id="addBookButton" onclick="redirectToAddBook()">Add Book</button>
           
         <div id="container">
             <table id="table">

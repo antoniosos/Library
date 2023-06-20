@@ -1,0 +1,35 @@
+.email::after {
+    content: attr(data-email);
+    display: inline;
+  }
+  
+  .email {
+    display: inline-block;
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .email::after {
+    content: attr(data-email);
+    position: absolute;
+    left: 100%;
+    top: 0;
+    white-space: nowrap;
+    padding-left: 0.5em;
+  }
+
+h3 {
+    font-size: 20px;
+    color: #36393e;
+    margin-bottom: 0.5rem;
+}
+
+.about-me {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+  

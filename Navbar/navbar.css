@@ -1,0 +1,123 @@
+header {
+    display: flex;
+    width: 100%;
+    background-color: #36393e;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header h1 {
+    margin-left: 1rem;
+  }
+  
+  header h1 a {
+    text-decoration: none;
+    color: rgb(209, 209, 209);
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-menu {
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+  }
+  
+  .dropbtn {
+    background-color: #36393e;
+    color: rgb(209, 209, 209);
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #36393e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: rgb(209, 209, 209);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #585c64;
+  }
+  
+  .dropdown-menu:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-menu:hover .dropbtn {
+    background-color: #585c64;
+  }
+  
+  .navbar a {
+    display: block;
+    color: rgb(209, 209, 209);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #585c64;
+    color: rgb(209, 209, 209);
+  }
+
+  .footer {
+    background-color: #f1f1f1;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    text-align: center;
+    flex-shrink: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  @media (max-width: 600px) {
+    .navbar-content {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    .dropdown-menu {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .heading {
+      font-size: 20px;
+    }
+  }
+  

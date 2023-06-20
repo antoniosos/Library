@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/HomePage/homePageStyle.css">
+    <link rel="stylesheet" href="AddbookStyle.css">
     <title>Add Book</title>
 </head>
 <body>
-
     <header>
         <h1 class="heading">
             <a href="HomePage\testPage.php">My book list</a>
@@ -43,39 +43,43 @@
     <h1>Add Book</h1>
     <form id="bookForm" onsubmit="submitForm(event)">
         <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required>
+        <input type="text" id="title" name="title" class="input" required>
         <br><br>
         
         <label for="author">Author:</label>
-        <input type="text" id="author" name="author" required>
+        <input type="text" id="author" name="author" class="input" required>
         <br><br>
         
         <label for="genre">Genre:</label>
-        <input type="text" id="genre" name="genre" required>
+        <input type="text" id="genre" name="genre" class="input" required>
+        <br><br>
+
+        <label for="genre">Release date(YYYY-MM-DD):</label>
+        <input type="text" id="genre" name="rel_date" class="input" required>
         <br><br>
         
         <label for="page_count">Page Count:</label>
-        <input type="number" id="page_count" name="page_count" required>
+        <input type="number" id="page_count" name="page_count" class="input" required>
         <br><br>
         
         <label for="contents">Contents(short description):</label>
-        <textarea id="contents" name="contents"></textarea>
+        <textarea id="contents" name="contents" class="input"></textarea>
         <br><br>
         
         <label for="coverImgString">Cover Image String(URL):</label>
-        <input type="text" id="coverImgString" name="coverImgString">
+        <input type="text" id="coverImgString" name="coverImgString" class="input">
         <br><br>
         
         <label for="starRating">Star rating String(up to 5 "*"):</label>
-        <input type="text" id="starRating" name="starRating">
+        <input type="text" id="starRating" name="starRating" class="input">
         <br><br>
 
         <label for="readState">Read State String:</label>
-        <input type="text" id="readState" name="reaadState">
+        <input type="text" id="readState" name="readState" class="input">
         <br><br>
 
 
-        <input type="submit" value="Add Book">
+        <input id="submitbtn" type="submit" value="Add Book">
     </form>
     
     <div class="footer">
@@ -89,6 +93,9 @@
             // Get the form data
             const form = document.getElementById("bookForm");
             const formData = new FormData(form);
+
+            // Log the form data to the console
+            console.log("Form Data:", formData);
     
             // Create a new AJAX request
             const xhr = new XMLHttpRequest();
