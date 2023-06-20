@@ -1,7 +1,7 @@
 header {
   display: flex;
   width: 100%;
-  background-color: #c5c5c5;
+  background-color: #36393e;
   align-items: center;
   justify-content: space-between;
 }
@@ -12,7 +12,7 @@ header h1 {
 
 header h1 a {
   text-decoration: none;
-  color: #333;
+  color: rgb(209, 209, 209);
 }
 
 .navbar {
@@ -32,8 +32,8 @@ header h1 a {
 }
 
 .dropbtn {
-  background-color: #f1f1f1;
-  color: #333;
+  background-color: #36393e;
+  color: rgb(209, 209, 209);
   border: none;
   outline: none;
   padding: 10px 16px;
@@ -44,21 +44,21 @@ header h1 a {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #36393e;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: #333;
+  color: rgb(209, 209, 209);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #585c64;
 }
 
 .dropdown-menu:hover .dropdown-content {
@@ -66,12 +66,12 @@ header h1 a {
 }
 
 .dropdown-menu:hover .dropbtn {
-  background-color: #ddd;
+  background-color: #585c64;
 }
 
 .navbar a {
   display: block;
-  color: #333;
+  color: rgb(209, 209, 209);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -79,8 +79,8 @@ header h1 a {
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #585c64;
+  color: rgb(209, 209, 209);
 }
 
 #container {
