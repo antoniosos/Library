@@ -9,10 +9,10 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent form submission
-  
+  /*
   if (!validateForm()) {
     return false; // Validation failed, prevent form submission
-  }
+  }*/
   
   // Validation passed
   const nickname = nicknameInput.value;
@@ -31,9 +31,10 @@ form.addEventListener("submit", function(event) {
   // Handle the response
   xhr.onload = function() {
 
-    $response = xhr.responseText;
-      if($response === "success"){
-        window.location.href = "home.html";
+    let response = xhr.responseText.trim();
+      console.log(response);
+      if(response === "success"){
+        window.location.assign("login.html");
       }
 
   };
