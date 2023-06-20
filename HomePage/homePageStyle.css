@@ -89,10 +89,46 @@ header h1 a {
   margin-right: 1rem;
   overflow-x: auto;
 }
-
-
+  
 table td {
   padding-left: 10px;
+}
+
+.editButton,
+.applyButton,
+.removeButton {
+  background-color: #4CAF50; /* Green background color */
+  border: none; /* Remove button border */
+  color: white; /* Button text color */
+  padding: 8px 16px; /* Add some padding around the text */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline-block element */
+  font-size: 14px; /* Adjust the font size */
+  transition-duration: 0.4s; /* Add transition effect */
+  cursor: pointer; /* Display a cursor on hover */
+}
+
+.editButton:hover,
+.applyButton:hover,
+.removeButton:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
+
+.editButton:active,
+.applyButton:active,
+.removeButton:active {
+  background-color: #3e8e41; /* Dark green color when button is clicked */
+}
+  
+.removeButton {
+  background-color: rgb(202, 0, 0);
+}
+.removeButton:hover {
+  background-color: rgb(148, 0, 0);
+}
+.removeButton:active {
+  background-color: rgb(122, 0, 0);
 }
 
 .editable {
