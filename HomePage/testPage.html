@@ -17,8 +17,10 @@
         </h1>
         <nav class="navbar">
             <div class="navbar-content">
+                <a href="HomePage\testPage.php">Home</a>
                 <a href="/AddBook/addBook.php">Add Book</a>
-                <a href="Navbar\AboutUs.html">About Us</a>
+                <a href="Navbar\AboutUs.php">About Us</a>
+                <a href="Navbar\Contact.php">Contact</a>
                 <span class="session-variable">
                     <?php
                         session_start();
@@ -29,13 +31,18 @@
                 </span>
             </div>
             <select name="navigation" id="mobile-navigation">
+                <option value="home">
+                    <a href="HomePage\testPage.php">Home</a>
+                </option>
                 <option value="add book">
                     <a href="/AddBook/addBook.php">Add Book</a>
                 </option>
-                <option value="adfasdfas">
-                    <a href="Navbar\AboutUs.html">About Us</a>
+                <option value="about us">
+                    <a href="Navbar\AboutUs.php">About Us</a>
                 </option>
-                
+                <option value="contact">
+                    <a href="Navbar\Contact.php">Contact</a>
+                </option>
                 
             </select>
 
