@@ -8,18 +8,23 @@
     <title>Add Book</title>
 </head>
 <body>
-    <div class="navbar">
-        <a href="/HomePage/testPage.php">Home</a>
-        <a href="#">Add Book</a>
-        <span class="session-variable">
-            <?php
-                session_start();
-                if(isset($_SESSION['email'])) {
-                    echo $_SESSION['email'];
-                }
-            ?>
-        </span>
-    </div>
+    <header>
+        <h1>
+            <a href="#">My book list</a>
+        </h1>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="/AddBook/addBook.php">Add Book</a>
+            <span class="session-variable">
+                <?php
+                    session_start();
+                    if(isset($_SESSION['email'])) {
+                        echo $_SESSION['email'];
+                    }
+                ?>
+            </span>
+        </nav>
+    </header>
 
     <h1>Add Book</h1>
     <form id="bookForm" onsubmit="submitForm(event)">
