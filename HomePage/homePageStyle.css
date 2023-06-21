@@ -91,7 +91,7 @@ header h1 a {
 }
 
 #filter,
-#addBookButton {
+main a {
   background-color: #585c64;
   border: none;
   color: white;
